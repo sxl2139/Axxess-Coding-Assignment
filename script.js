@@ -29,6 +29,7 @@
       }
       //start timer logic
       else{
+        $("#startTimerBtn").removeAttr("onclick");
         //start timer
         runTimer(count);
       }
@@ -44,7 +45,10 @@
           }
 
           //display timer value
-          $("#counter").html(timer);
+          $("#counter").html(timer)
+          $("#counter").css({"padding-top": "120px"});
+          $("#counter").css({"font-size": "28px"});
+          $("#counter").css({"font-weight": "bold"});
 
           //highlight both divs if timer is divisible by 3 and 5
           if(timer%3==0 && timer%5==0){
@@ -66,12 +70,19 @@
             $("#fingers").removeClass("chat");
             $("#toes").removeClass("chat");
           }
+          if(timer==count){
+            setTimeout(function() {
+          	alert("Please click on Reset to start over again!");
+          },10)
+          }
+
       },
       1000);
     }
 
     function clearTimer(){
       //clear timer
+      $('#startTimerBtn').attr('onclick', 'startTimer()');
       clearInterval(interval);
     }
 
@@ -91,6 +102,7 @@
     }
 
     function resetUI() {
+        $('#startTimerBtn').attr('onclick', 'startTimer()');
         $("#counter").text("0");
         $("#fingers").removeClass("chat");
         $("#toes").removeClass("chat");

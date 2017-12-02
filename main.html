@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="script.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body onload="onLoad()">
@@ -12,42 +13,42 @@
   <h1>Fingers and Toes</h1>
 </div>
 <div class="wrapper">
-    <div class="row border" style="margin:5%;border:1px solid gray;box-shadow: 1px 1px 4px 0 lightgray;background: lightgray;">
-      <div class="col-5 menu marginTop">
+    <div class="row border" style="padding:15px;margin:5%;border:1px solid gray;box-shadow: 1px 1px 4px 0 lightgray;background: lightgray;">
+      <div class="row">
+        <label class="input-text">Please enter the timer value :</label>
+        <input class="inputCounter" id="count" type="number" placeholder="Enter no of seconds">
+      </div>
+
+      <div class="col-1 menu">
         <ul>
-          <li class="border">Enter Timer value: <input id="count" type="number" placeholder="Enter no of seconds"></li>
+          <li id="startTimerBtn" class="border pointer" onclick="startTimer()">Start</li>
         </ul>
       </div>
-      <div class="col-2 menu marginTop">
+      <div class="col-1 menu">
         <ul>
-          <li class="border" onclick="startTimer()">Start</li>
+          <li id="restartBtn" class="border pointer" onclick="restart()">Restart</li>
         </ul>
       </div>
-      <div class="col-2 menu marginTop">
+      <div class="col-1 menu">
         <ul>
-          <li class="border" onclick="restart()">Restart</li>
-        </ul>
-      </div>
-      <div class="col-2 menu marginTop">
-        <ul>
-            <li class="border" onclick="reset()">Reset</li>
+            <li class="border pointer" onclick="reset()">Reset</li>
         </ul>
       </div>
   </div>
-<div class="row">
+<div class="row height">
     <div class="col-3 marginleft">
-        <div class="aside border">
-          <h2 id="counter">0</h2>
+        <div class="aside border" id="counter" style="background: gray;">
+          <h1  class="center" id="counter">0</h1>
         </div>
     </div>
-    <div class="col-3" >
+    <div class="col-3">
         <div class="aside border" id="fingers">
-          <h2>Fingers</h2>
+          <h1 class="center" style="color:black">FINGERS</h1>
         </div>
     </div>
-    <div class="col-3 marginright" >
+    <div class="col-3 marginright">
         <div class="aside border" id="toes">
-          <h2>Toes</h2>
+          <h1 class="center" style="color:black">TOES</h1>
         </div>
     </div>
 </div>

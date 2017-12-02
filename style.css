@@ -10,9 +10,6 @@
     float: left;
     padding: 15px;
 }
-html {
-    font-family: "Lucida Sans", sans-serif;
-}
 .header {
     background-color: cornflowerblue;
     color: #ffffff;
@@ -34,12 +31,15 @@ html {
 .menu li:hover {
     background-color: #0099cc;
 }
+.pointer{
+    cursor: pointer;
+}
 .aside {
-    background: cornflowerblue;
     padding: 15px;
     color: #ffffff;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
+    height:80%;
 }
 .border{
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -53,15 +53,20 @@ html {
     padding: 15px;
 }
 .center{
-  display: table;
-  margin: 0 auto;
+  margin-top:35%;
 }
-.wrapper{
+.input-text{
+  font-size: 26px;
+  font-weight: bold;
+}
+.inputCounter{
+  height:30px;
+  width:15%;
 }
 /* For desktop: */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
+.col-3 {width: 25%;height:80%;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
 .col-6 {width: 50%;}
@@ -82,19 +87,23 @@ html {
 }
 .chat {
    animation: animationFrames 1s infinite;
-   background-color: rgb(153, 153, 255);
+   background-color: rgb(255, 102, 255);
+}
+.height{
+  height:450px;
 }
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
     }
-    .col-2{
+    .col-1{
       width: 33%;
       margin-top:0%;
     }
     .col-3{
       padding-top:0%;
+      height:30%;
     }
     .marginright{
       margin-right: 0%;
@@ -105,4 +114,25 @@ html {
     .marginTop{
       margin-top:0%;
     }
+    .aside{
+      height:100%;
+    }
+    .height{
+      height:300px;
+    }
+    .center{
+      margin-top: 1%;
+    }
+    .inputCounter{
+      height:30px;
+      width:50%;
+    }
+}
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px){
+  .col-1{
+    width: 13%;
+    margin-top:0%;
+  }
 }

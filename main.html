@@ -1,13 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Fingers and Toes</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <div class = "header">
-      <h1>Fingers and Toes</h1>
-  </div>
-</body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="onLoad()">
+
+<div class="header">
+  <h1>Fingers and Toes</h1>
+</div>
+<div class="wrapper">
+    <div class="row border" style="margin:5%;border:1px solid gray;box-shadow: 1px 1px 4px 0 lightgray;background: lightgray;">
+      <div class="col-5 menu marginTop">
+        <ul>
+          <li class="border">Enter Timer value: <input id="count" type="number" placeholder="Enter no of seconds"></li>
+        </ul>
+      </div>
+      <div class="col-2 menu marginTop">
+        <ul>
+          <li class="border" onclick="startTimer()">Start</li>
+        </ul>
+      </div>
+      <div class="col-2 menu marginTop">
+        <ul>
+          <li class="border" onclick="restart()">Restart</li>
+        </ul>
+      </div>
+      <div class="col-2 menu marginTop">
+        <ul>
+            <li class="border" onclick="reset()">Reset</li>
+        </ul>
+      </div>
+  </div>
+<div class="row">
+    <div class="col-3 marginleft">
+        <div class="aside border">
+          <h2 id="counter">0</h2>
+        </div>
+    </div>
+    <div class="col-3" >
+        <div class="aside border" id="fingers">
+          <h2>Fingers</h2>
+        </div>
+    </div>
+    <div class="col-3 marginright" >
+        <div class="aside border" id="toes">
+          <h2>Toes</h2>
+        </div>
+    </div>
+</div>
+
+</div>
 </html>

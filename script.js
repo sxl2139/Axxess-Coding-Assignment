@@ -45,10 +45,7 @@
           }
 
           //display timer value
-          $("#counter").html(timer)
-          $("#counter").css({"padding-top": "120px"});
-          $("#counter").css({"font-size": "28px"});
-          $("#counter").css({"font-weight": "bold"});
+          $("#counter").html(timer);
 
           //highlight both divs if timer is divisible by 3 and 5
           if(timer%3==0 && timer%5==0){
